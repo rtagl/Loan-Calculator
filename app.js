@@ -32,9 +32,9 @@ function calculateResults() {
   const monthly = (principal * x * calculatedInterest) / (x-1);
 
   if (isFinite(monthly)) {
-    monthlyPayment.value = monthly.toFixed(2);
-    totalPayment.value = (monthly * calculatedPayments).toFixed(2);
-    totalInterest.value = ((monthly * calculatedPayments) - principal).toFixed(2)
+    monthlyPayment.value = `$${monthly.toFixed(2)}`;
+    totalPayment.value = `$${(monthly * calculatedPayments).toFixed(2)}`;
+    totalInterest.value = `${((monthly * calculatedPayments) - principal).toFixed(2)}`;
     //show results
     document.getElementById('results').style.display = 'block';
     // hide results
